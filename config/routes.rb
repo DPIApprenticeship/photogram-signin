@@ -4,12 +4,16 @@ Rails.application.routes.draw do
 
   # User routes
 
+  get("/user_sign_up", {:controller => "users", :action => "new_registration_form"})
+
   # CREATE
   get("/insert_user_record", {:controller => "users", :action => "create" })
 
   # READ
   get("/users", {:controller => "users", :action => "index"})
   get("/users/:the_username", {:controller => "users", :action => "show"})
+
+
 
   # UPDATE
   get("/update_user/:the_user_id", {:controller => "users", :action => "update" })
